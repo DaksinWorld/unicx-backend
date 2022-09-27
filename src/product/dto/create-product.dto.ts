@@ -59,6 +59,9 @@ export class CreateProductDto {
     @IsString()
     liveText: string;
 
+    @IsNumber()
+    participants: number;
+
     @IsString()
     telegram: string;
 
