@@ -27,6 +27,9 @@ export class ProductModel {
     lockedPercentage: string;
 
     @Prop()
+    participants: number;
+
+    @Prop()
     durationDays: number;
 
     @Prop()
