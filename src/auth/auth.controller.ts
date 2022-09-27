@@ -43,16 +43,15 @@ export class AuthController {
     return await this.authService.getOne(user.email)
   }
 
+  @Post('delete')
+  @UseGuards(JwtAuthGuard)
+  async deleteAll() {
+    return await this.authService.deleteAll()
+  }
+
   @Post('isAdmin')
   @UseGuards(JwtAuthGuard)
-  async isAdmin(@Headers() headers) {
-    const user = await this.authService.decode(headers.authorization.split(' ')[1])
-
-    // @ts-ignore
-    if(user.email === 'onosov@gmail.com' || user.email === 'matoday.ma@gmail.com') {
-      return true
-    } else {
-      return false
-    }
+  async isAdmin() {
+    return true
   }
 }

@@ -63,6 +63,10 @@ export class AuthService {
     return await this.userModel.findOne({email: id}).exec()
   }
 
+  async deleteAll() {
+    return await this.userModel.deleteMany().exec()
+  }
+
   async decode(text: string) {
     return this.jwtService.decode(text)
   }
