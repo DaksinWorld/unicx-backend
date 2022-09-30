@@ -20,15 +20,15 @@ export class AllocationService {
     return await this.allocationModel.find().exec()
   }
 
-  async findOne(id: number) {
+  async findOne(id: string) {
     return await this.allocationModel.findOne({_id: id}).exec()
   }
 
-  async update(id: number, updateAllocationDto: UpdateAllocationDto) {
+  async update(id: string, updateAllocationDto: UpdateAllocationDto) {
     return await this.allocationModel.findByIdAndUpdate(id, updateAllocationDto).exec()
   }
 
-  async remove(id: number) {
+  async remove(id: string) {
     return await this.allocationModel.findByIdAndRemove(id).exec()
   }
 }

@@ -21,18 +21,18 @@ export class AllocationController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.allocationService.findOne(+id);
+    return this.allocationService.findOne(id);
   }
 
   @Patch(':id')
   @UseGuards(JwtAuthGuard)
   update(@Param('id') id: string, @Body() updateAllocationDto: UpdateAllocationDto) {
-    return this.allocationService.update(+id, updateAllocationDto);
+    return this.allocationService.update(id, updateAllocationDto);
   }
 
   @Delete(':id')
   @UseGuards(JwtAuthGuard)
   remove(@Param('id') id: string) {
-    return this.allocationService.remove(+id);
+    return this.allocationService.remove(id);
   }
 }
