@@ -11,6 +11,7 @@ import {ServeStaticModule} from "@nestjs/serve-static";
 import {path} from "app-root-path";
 import {ConstantsModule} from "./constants/constants.module";
 import { DocsModule } from './docs/docs.module';
+import { AllocationModule } from './allocation/allocation.module';
 
 @Module({
   imports: [
@@ -32,7 +33,8 @@ import { DocsModule } from './docs/docs.module';
     ProductModule,
     FilesModule,
     ConstantsModule,
-    DocsModule
+    DocsModule,
+    AllocationModule
   ],
   controllers: [AppController],
   providers: [AppService],
