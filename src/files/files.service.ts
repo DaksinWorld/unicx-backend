@@ -3,7 +3,10 @@ import { FileElementResponse } from './dto/file-element.reposonse';
 import { format } from 'date-fns';
 import { path } from 'app-root-path';
 import { ensureDir, writeFile } from 'fs-extra';
+<<<<<<< HEAD
 import * as sharp from 'sharp';
+=======
+>>>>>>> 9342e598fd28a7af0f8114b90e11a826608e1249
 import { MFile } from './mfile.class';
 
 @Injectable()
@@ -22,9 +25,14 @@ export class FilesService {
 		return res;
 	}
 
+<<<<<<< HEAD
 	convertToWebP(file: Buffer): Promise<Buffer> {
 		return sharp(file)
 			.webp()
 			.toBuffer();
+=======
+	convertToWebP(file: Buffer): Buffer {
+		return file;
+>>>>>>> 9342e598fd28a7af0f8114b90e11a826608e1249
 	}
 }

@@ -12,6 +12,10 @@ import {path} from "app-root-path";
 import {ConstantsModule} from "./constants/constants.module";
 import { DocsModule } from './docs/docs.module';
 import { AllocationModule } from './allocation/allocation.module';
+<<<<<<< HEAD
+=======
+import { join } from 'path';
+>>>>>>> 9342e598fd28a7af0f8114b90e11a826608e1249
 
 @Module({
   imports: [
@@ -21,7 +25,11 @@ import { AllocationModule } from './allocation/allocation.module';
       serveRoot: '/uploads'
     }),
     ServeStaticModule.forRoot({
+<<<<<<< HEAD
       rootPath: `${path}/client`,
+=======
+      rootPath: join(__dirname, 'client'),
+>>>>>>> 9342e598fd28a7af0f8114b90e11a826608e1249
       serveRoot: '/'
     }),
     MongooseModule.forRootAsync({
